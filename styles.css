@@ -544,6 +544,77 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+.reviews-stats {
+  margin-bottom: 2.5rem;
+}
+
+.reviews-stats-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.reviews-widget {
+  margin-bottom: 4rem;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+}
+
+.review-stars {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.review-quote {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--cream-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.review-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.review-date {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-muted);
+  opacity: 0.6;
+}
+
+@media (max-width: 700px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ============================================
    INSTAGRAM CTA
    ============================================ */
