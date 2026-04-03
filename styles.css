@@ -1,0 +1,1017 @@
+/* ============================================
+   TULSA HAIR EXTENSION PRO - Global Styles
+   Dark Editorial Glamour Design System
+   ============================================ */
+
+:root {
+  --bg: #0C0A09;
+  --bg-soft: #141210;
+  --surface: #1A1714;
+  --cream: #F2EBE0;
+  --cream-muted: #B8AFA6;
+  --gold: #C5A882;
+  --gold-light: #D9C4A8;
+  --blush: #C4857A;
+  --border: rgba(197, 168, 130, 0.15);
+  --font-heading: 'Bodoni Moda', serif;
+  --font-body: 'Raleway', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--cream);
+}
+
+h1 { font-size: clamp(2.8rem, 7vw, 6rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+
+p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--cream-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  display: block;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(12,10,9,0.95) 0%, transparent 100%);
+  transition: background 0.4s ease;
+}
+
+.nav.scrolled {
+  background: rgba(12, 10, 9, 0.97);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-book {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.68rem !important;
+  letter-spacing: 0.18em !important;
+  transition: background 0.3s ease, color 0.3s ease !important;
+}
+
+.nav-book:hover {
+  background: var(--gold) !important;
+  color: var(--bg) !important;
+}
+
+/* Mobile nav */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-gold {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+}
+
+.btn-gold:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.btn-cream {
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  background: transparent;
+}
+
+.btn-cream:hover {
+  background: var(--cream);
+  color: var(--bg);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(12,10,9,0.55) 0%, rgba(12,10,9,0.85) 70%, #0C0A09 100%);
+  z-index: 1;
+}
+
+/* Grain texture */
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+}
+
+.hero-content .label {
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  color: var(--cream);
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: var(--cream-muted);
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid var(--border);
+  z-index: -1;
+}
+
+.about-text .label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.about-text h2 {
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   SCHEDULE CTA
+   ============================================ */
+
+.schedule-cta {
+  text-align: center;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.schedule-cta h2 {
+  margin-bottom: 1.5rem;
+}
+
+.schedule-cta p {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+}
+
+/* ============================================
+   EXTENSION TYPES
+   ============================================ */
+
+.extension-types-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.extension-types-header .label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.extension-types-header h2 {
+  max-width: 650px;
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.extension-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.extension-card {
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.extension-card-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.extension-card:hover .extension-card-image {
+  transform: scale(1.04);
+}
+
+.extension-card-body {
+  padding: 2.5rem 2rem;
+}
+
+.extension-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--cream);
+}
+
+.extension-card p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   INVESTMENT NOTE
+   ============================================ */
+
+.investment-note {
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.investment-note h3 {
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.investment-note p {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faq-header .label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 0;
+  cursor: pointer;
+  gap: 1.5rem;
+}
+
+.faq-question-text {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--cream);
+  font-weight: 400;
+  flex: 1;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  color: var(--gold);
+  transition: transform 0.35s ease;
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-weight: 200;
+  line-height: 1;
+  width: 24px;
+  text-align: center;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 400px;
+}
+
+.faq-answer p {
+  padding-bottom: 1.8rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+/* ============================================
+   REVIEWS SECTION
+   ============================================ */
+
+.reviews-section {
+  text-align: center;
+  background: var(--bg-soft);
+}
+
+.reviews-section .label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.reviews-section h2 {
+  margin-bottom: 2rem;
+}
+
+.reviews-placeholder {
+  border: 1px solid var(--border);
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.reviews-placeholder p {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   INSTAGRAM CTA
+   ============================================ */
+
+.instagram-cta {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.instagram-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 10, 9, 0.72);
+  z-index: 1;
+}
+
+.instagram-cta-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.instagram-cta h2 {
+  margin-bottom: 0.5rem;
+}
+
+.instagram-handle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  padding: 5rem 0 3rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand .footer-logo {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-contact p,
+.footer-contact a {
+  font-size: 0.88rem;
+  color: var(--cream-muted);
+  line-height: 2;
+  display: block;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: var(--gold);
+}
+
+.footer-col-title {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.footer-hours p {
+  font-size: 0.88rem;
+  line-height: 2;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  line-height: 2.2;
+}
+
+.footer-links a {
+  font-size: 0.88rem;
+  color: var(--cream-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.78rem;
+  color: var(--cream-muted);
+  opacity: 0.6;
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   INNER PAGE HERO (sub-pages)
+   ============================================ */
+
+.page-hero {
+  padding: 10rem 0 5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero .label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.page-hero .subtitle {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--cream-muted);
+}
+
+/* ============================================
+   INQUIRY FORM
+   ============================================ */
+
+.inquiry-page {
+  padding: 5rem 0 8rem;
+}
+
+.inquiry-intro {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+}
+
+.inquiry-intro p {
+  margin-bottom: 1.2rem;
+}
+
+.inquiry-intro ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.inquiry-intro ul li {
+  font-size: 0.95rem;
+  color: var(--cream-muted);
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.inquiry-intro ul li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.form-card {
+  background: var(--surface);
+  padding: 4rem;
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+}
+
+.form-section-title {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 2.5rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--cream-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.95rem;
+  padding: 0.75rem 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--gold);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.75;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(184, 175, 166, 0.35);
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--cream-muted);
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+.radio-label input[type="radio"] {
+  width: auto;
+  accent-color: var(--gold);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-bottom: none;
+  padding: 0;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-note {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(197, 168, 130, 0.04);
+}
+
+.form-submit {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.form-submit .btn {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ============================================
+   POLICY / CARE / PRIVACY PAGES
+   ============================================ */
+
+.prose-page {
+  padding: 4rem 0 8rem;
+}
+
+.prose-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.prose-content h2 {
+  font-size: 1.6rem;
+  margin: 3.5rem 0 1rem;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.prose-content h3 {
+  font-size: 1.2rem;
+  margin: 2.5rem 0 0.75rem;
+  color: var(--cream);
+}
+
+.prose-content p {
+  margin-bottom: 1.2rem;
+}
+
+.prose-content ul,
+.prose-content ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.prose-content ul li,
+.prose-content ol li {
+  color: var(--cream-muted);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 0.5rem;
+}
+
+.prose-content strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.prose-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .about-image img {
+    height: 400px;
+  }
+
+  .extension-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-card {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(12, 10, 9, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+    z-index: 200;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
