@@ -212,7 +212,7 @@ a:hover {
 
 .btn-gold:hover {
   background: var(--gold);
-  color: var(--bg);
+  color: white;
 }
 
 .btn-cream {
@@ -223,7 +223,7 @@ a:hover {
 
 .btn-cream:hover {
   background: var(--cream);
-  color: var(--bg);
+  color: white;
 }
 
 /* ============================================
@@ -1084,5 +1084,446 @@ a:hover {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   NAV LOGO IMAGE
+   ============================================ */
+
+a.nav-logo {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.nav-logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ============================================
+   HERO SPLIT (homepage editorial layout)
+   ============================================ */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  min-height: 100vh;
+}
+
+.hero-split-portrait {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.hero-split-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: white;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hero-badge-stars {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.hero-badge-text {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  display: block;
+}
+
+.hero-split-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 5rem 5rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.hero-split-content .label {
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.hero-split-content h1 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  margin-bottom: 1.75rem;
+  color: var(--cream);
+}
+
+.hero-split-content h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--cream-muted);
+  max-width: 400px;
+  margin-bottom: 3rem;
+  line-height: 1.85;
+}
+
+/* Organic blob decorative accent */
+.hero-deco {
+  position: absolute;
+  top: -8%;
+  right: -12%;
+  width: 70%;
+  padding-top: 70%;
+  border-radius: 58% 42% 45% 55% / 55% 45% 58% 42%;
+  background: var(--blush);
+  opacity: 0.55;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-split-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   PROOF BAR
+   ============================================ */
+
+.proof-bar {
+  background: var(--gold);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.proof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 3.5rem;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.proof-item strong {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.55rem;
+  color: white;
+  font-weight: 400;
+  display: block;
+}
+
+.proof-item span {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  display: block;
+}
+
+.proof-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.25);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   ABOUT - EDITORIAL
+   ============================================ */
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-editorial-text .label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.about-editorial-text h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.about-editorial-text h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.about-editorial-text p {
+  margin-bottom: 1.4rem;
+}
+
+.about-editorial-text .btn {
+  margin-top: 1.5rem;
+}
+
+.about-editorial-image {
+  position: relative;
+}
+
+.about-editorial-image img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.about-editorial-image-accent {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  border: 2px solid var(--gold);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* ============================================
+   EXTENSION CARD NUMBERED MARKERS
+   ============================================ */
+
+.extension-card-number {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 6rem;
+  font-weight: 400;
+  color: var(--gold);
+  opacity: 0.12;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   FEATURED REVIEW PULL QUOTE
+   ============================================ */
+
+.featured-review {
+  background: var(--bg-soft);
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-review-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.featured-review-mark {
+  font-family: var(--font-heading);
+  font-size: 18rem;
+  line-height: 0.6;
+  color: var(--gold);
+  opacity: 0.1;
+  position: absolute;
+  top: -1rem;
+  left: -3rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.featured-review-stars {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-review blockquote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  color: var(--cream);
+  line-height: 1.6;
+  margin: 0 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-review-author {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   INSTAGRAM CTA - SOLID CORAL
+   ============================================ */
+
+.instagram-cta-coral {
+  background: var(--gold);
+  text-align: center;
+  padding: 7rem 2rem;
+}
+
+.instagram-cta-coral h2 {
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.instagram-cta-coral .instagram-handle {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+/* ============================================
+   BUTTON ADDITIONS
+   ============================================ */
+
+.btn-coral {
+  background: var(--gold);
+  border: 2px solid var(--gold);
+  color: white;
+}
+
+.btn-coral:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: white;
+}
+
+.btn-white {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-white:hover {
+  background: white;
+  color: var(--gold);
+}
+
+/* ============================================
+   RESPONSIVE - NEW COMPONENTS
+   ============================================ */
+
+@media (max-width: 960px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 65vh auto;
+  }
+
+  .hero-split-portrait {
+    min-height: 0;
+    height: 65vh;
+  }
+
+  .hero-split-content {
+    padding: 4rem 2rem;
+  }
+
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-editorial-image {
+    order: -1;
+  }
+
+  .about-editorial-image img {
+    height: 400px;
+  }
+
+  .proof-bar {
+    flex-wrap: wrap;
+  }
+
+  .proof-item {
+    padding: 1.2rem 2rem;
+  }
+
+  .proof-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-split {
+    grid-template-rows: 58vh auto;
+  }
+
+  .hero-split-portrait {
+    height: 58vh;
+  }
+
+  .featured-review-mark {
+    font-size: 10rem;
+    left: -1rem;
+  }
+
+  .about-editorial-image-accent {
+    display: none;
+  }
+
+  .proof-item {
+    flex: 1 1 40%;
+  }
+
+  .extension-card-number {
+    font-size: 4rem;
   }
 }
