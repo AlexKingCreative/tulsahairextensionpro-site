@@ -1,19 +1,19 @@
 /* ============================================
    TULSA HAIR EXTENSION PRO - Global Styles
-   Dark Editorial Glamour Design System
+   Warm Coral Brand Design System
    ============================================ */
 
 :root {
-  --bg: #0C0A09;
-  --bg-soft: #141210;
-  --surface: #1A1714;
-  --cream: #F2EBE0;
-  --cream-muted: #B8AFA6;
-  --gold: #C5A882;
-  --gold-light: #D9C4A8;
-  --blush: #C4857A;
-  --border: rgba(197, 168, 130, 0.15);
-  --font-heading: 'Bodoni Moda', serif;
+  --bg: #FEF0EA;
+  --bg-soft: #F9E5DA;
+  --surface: #FFFFFF;
+  --cream: #3A2415;
+  --cream-muted: #7A5C4A;
+  --gold: #FF6F61;
+  --gold-light: #E05A4D;
+  --blush: #F4C5B8;
+  --border: rgba(58, 36, 21, 0.12);
+  --font-heading: 'DM Serif Display', serif;
   --font-body: 'Raleway', sans-serif;
 }
 
@@ -114,12 +114,12 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to bottom, rgba(12,10,9,0.95) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(254,240,234,0.95) 0%, transparent 100%);
   transition: background 0.4s ease;
 }
 
 .nav.scrolled {
-  background: rgba(12, 10, 9, 0.97);
+  background: rgba(254, 240, 234, 0.97);
   border-bottom: 1px solid var(--border);
 }
 
@@ -251,7 +251,7 @@ a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(12,10,9,0.55) 0%, rgba(12,10,9,0.85) 70%, #0C0A09 100%);
+  background: linear-gradient(to bottom, rgba(254,240,234,0.25) 0%, rgba(254,240,234,0.6) 70%, #FEF0EA 100%);
   z-index: 1;
 }
 
@@ -640,7 +640,7 @@ a:hover {
 .instagram-cta-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(12, 10, 9, 0.72);
+  background: rgba(254, 240, 234, 0.78);
   z-index: 1;
 }
 
@@ -893,7 +893,7 @@ a:hover {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(184, 175, 166, 0.35);
+  color: rgba(122, 92, 74, 0.4);
 }
 
 .radio-group {
@@ -937,7 +937,7 @@ a:hover {
   margin-bottom: 2rem;
   padding: 1rem;
   border-left: 2px solid var(--gold);
-  background: rgba(197, 168, 130, 0.04);
+  background: rgba(255, 111, 97, 0.06);
 }
 
 .form-submit {
@@ -1058,7 +1058,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(12, 10, 9, 0.98);
+    background: rgba(254, 240, 234, 0.98);
     flex-direction: column;
     align-items: center;
     justify-content: center;
