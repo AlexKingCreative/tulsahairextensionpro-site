@@ -17,6 +17,8 @@
   --font-body:    'Raleway', sans-serif;
 
   --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+
+  --max-content:  1600px;
 }
 
 /* ============================================
@@ -360,42 +362,6 @@ button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   .rotating-badge svg { animation: none; }
-}
-
-/* ============================================
-   MARQUEE TICKER
-   ============================================ */
-
-.marquee-wrap {
-  background: var(--coral);
-  overflow: hidden;
-  padding: 0.9rem 0;
-  white-space: nowrap;
-}
-
-.marquee-track {
-  display: inline-block;
-  animation: marquee 24s linear infinite;
-}
-
-.marquee-track span {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--white);
-  padding-right: 0;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-33.333%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
 }
 
 /* ============================================
@@ -1130,5 +1096,56 @@ button:focus-visible {
 
   .extension-panel-image {
     min-height: 70vw;
+  }
+}
+
+/* ============================================
+   LARGE SCREEN — 27" iMac, 4K, Ultrawide
+   ============================================ */
+
+@media (min-width: 1440px) {
+  /* Nav: prevent logo and links from drifting 50cm apart */
+  .nav {
+    padding-left: max(2.5rem, calc((100vw - var(--max-content)) / 2 + 2.5rem));
+    padding-right: max(2.5rem, calc((100vw - var(--max-content)) / 2 + 2.5rem));
+  }
+
+  /* Hero + About: cap these full-bleed grids */
+  .hero,
+  .about {
+    max-width: var(--max-content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Extension panels: center within their full-bleed section */
+  .extension-panel {
+    max-width: var(--max-content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Extensions section header */
+  .extensions-header {
+    padding-left: max(2rem, calc((100vw - var(--max-content)) / 2 + 2rem));
+    padding-right: max(2rem, calc((100vw - var(--max-content)) / 2 + 2rem));
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    max-width: var(--max-content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Bump container max-width for larger displays */
+  .container {
+    max-width: 1200px;
+  }
+
+  /* Footer padding */
+  .footer {
+    padding-left: max(2rem, calc((100vw - var(--max-content)) / 2 + 2rem));
+    padding-right: max(2rem, calc((100vw - var(--max-content)) / 2 + 2rem));
   }
 }
